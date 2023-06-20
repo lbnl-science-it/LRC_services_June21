@@ -33,9 +33,9 @@ img[alt~="center"] {
 1. [Overview of Lawrencium supercluster](#3)
 2. [MyLRC User Portal : account and project management](#6)
 3. [Open OnDemand Portal: GUI applications](#12)
-4. [Globus : fast data transfer](#16)
-5. [Software Module Farm: software packages availble for researchers](#20)
-6. [Slurm Job Scheduling: job submission and monitoring](#38)
+4. [Globus : fast data transfer](#15)
+5. [Software Module Farm: software packages availble for researchers](#18)
+6. [Slurm Job Scheduling: job submission and monitoring](#22)
 
 ---
 
