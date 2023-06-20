@@ -2,13 +2,10 @@
 marp: true
 theme: gaia
 color: #000
-footer: 'HPC training : 31 Jan, 2023'
+footer: 'HPC training : 21 June, 2023'
 colorSecondary: #333
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.jpg')
-
-
-
 ---
 
 <style>section { font-size: 25px; }</style>
@@ -21,9 +18,10 @@ img[alt~="center"] {
 
 <!-- _class: lead -->
 <!-- _paginate: false -->
-# Lawrencium 101 : HPC on Lawrencium Supercluster
+# Services on Lawrencium Supercluster
 ### Sapana Soni
 ###### HPCS User Support Team
+![ w:200](figures/ScienceIT-Logo-blue.png)
 
 ---
 
@@ -33,11 +31,11 @@ img[alt~="center"] {
 # Outline
 <style scoped>section { font-size: 26px; }</style>
 1. [Overview of Lawrencium supercluster](#3)
-2. [Getting Access and login to cluster](#6)
-3. [Data transfer to/from clusters](#12)
-4. [Software access and installation](#16)
-5. [Job submission and monitoring](#20)
-6. [Open On Demand: a browser based HPCS portal](#38)
+2. [MyLRC User Portal : account and project management](#6)
+3. [Open OnDemand Portal: GUI applications](#12)
+4. [Globus : fast data transfer](#16)
+5. [Software Module Farm: software packages availble for researchers](#20)
+6. [Slurm Job Scheduling: job submission and monitoring](#38)
 
 ---
 
@@ -55,8 +53,8 @@ img[alt~="center"] {
   - over 2187 compute nodes (~65016 CPU cores)
   - 210 GPU cards
   - 32 partitions, lr3, lr4, lr5,lr6, es1, cm1 ...
-  - 1652 user accounts 
-  - 410 projects/groups
+  - ~1700 user accounts 
+  - 342 projects/groups
 
 ---
 
@@ -73,18 +71,18 @@ img[alt~="center"] {
 
 ----
 
-### Getting Access to Cluster : [MyLRC User portal](https://mylrc.lbl.gov/)
+### MyLRC User portal: https://mylrc.lbl.gov/
 
-  The form based request for **project and user accounts** are now moved to [MyLRC portal](https://mylrc.lbl.gov/)
+  A portal for user and project accounts requests and their management [MyLRC portal](https://mylrc.lbl.gov/)
 
 
 ![center w:700](figures/MyLRC_login.png)
 
-Want to learn more about MyLRC portal? [Join HPCS trainign on 7th February](https://docs.google.com/forms/d/e/1FAIpQLSd6xKIEoOThNZlp1BckRaF0bSkln2V1OZXyplTkTdw0NQgXUA/viewform?usp=sf_link).  
+For more details see previous training [slides](https://github.com/lbnl-science-it/OOD_training_Feb2023.git) and [recording](https://drive.google.com/file/d/1YOFruybGu8i1xi8imHibyHiujIAymnrX/view?usp=share_link).  
 
 ----
 
-#### Getting Project Accounts
+#### Project Accounts
 - Three types of project accounts can be requested.   
   1. **Primary Investigator (PI) Computing Allowance (PCA) account**: free 300K service units (SUs) per year (pc_xxx)
   2. **Condo account**: PIs buy in compute nodes to be added to the general pool, in exchange for their own priority access and share the Lawrencium infrastructure (lr_xxx)
@@ -95,20 +93,21 @@ Want to learn more about MyLRC portal? [Join HPCS trainign on 7th February](http
 
 ----
 
-#### Getting User Accounts
-- PIs can sponsor researchers/students and external collaborators for cluster accounts.
-
-- Account requests and approval will be done through [MyLRC portal](https://mylrc.lbl.gov/).
-- Workflow
-  - Account creation request on the MyLRC portal
-  - Automatic email is sent to PI for approval
-  - PI approves request on the MyLRC portal
-  - Account creation on the cluster by HPCS team
-  - Users are notified upon account availability and OTP setup.
+#### User Accounts
+PIs can sponsor researchers/students and external collaborators for cluster accounts.
+Account requests and approval will be done through [MyLRC portal](https://mylrc.lbl.gov/).
   
-- Check out [documentation](https://it.lbl.gov/service/scienceit/high-performance-computing/lrc/mylrc-lawrencium-account-managemen-tsystem/).
+  **Current Workflow:**
+  1. Setup an account on MyLRC [portal](https://mylrc.lbl.gov/). Portal uses CILogon for user authentication. Users can register using email address provided by LBNL or UC Berkeley or other institutions or google.
+  2. Sign the User Access Agreement Form on the welcome page
+  3. Request to join existing project
+  4.  PI approval
+  5.  Lawrencium account creation by HPCS team
+  6. Users will receive a confirmation email and PIN+OTP set up instructions.
+  
+  Check out [documentation](https://it.lbl.gov/service/scienceit/high-performance-computing/lrc/mylrc-lawrencium-account-managemen-tsystem/).
 
-    -  Help us build [FAQ]( https://it.lbl.gov/resource/hpc/for-users/frequently-asked-questions). Submit your questions [here](https://docs.google.com/forms/d/e/1FAIpQLSfgtNRZbxmNrtNVYSZE5pHEH0foPMEMqMk3nKxenPo9xqIWrw/viewform).
+
 
 ---
 
@@ -156,8 +155,61 @@ Upon login to Lawrencium, you'll end up on one of the login nodes in your home d
   - `e.g. /clusterfs/etna/ or /global/scratch/projects/xxx`
 
 ---
+# Open OnDemand (OOD) Portal
 
-## Data Transfer 
+- OpenOnDemand is a web platform that provides an easy access to the cluster’s HPC resourses and services.
+- Designed and developed by Ohio Supercomputer Center.
+- Intuitive and easy access to computing resourses, alternative and convenient way to traditional command line access
+- Allow access to Lawrencium compute resources
+  - File browser: file editing, data transfer
+  - Shell command line access - terminal
+  - Job monitoring 
+- Interactive applications: Jupyter Server, RStudio Server, MATLAB, Desktop
+- Sever: [https://lrc-ondemand.lbl.gov/](https://lrc-ondemand.lbl.gov/)
+ 
+
+---
+
+# Accessing OOD on Lawrencium
+
+<style scoped>section { font-size: 25px; }</style>
+
+ 1. Web link to connect : [https://lrc-ondemand.lbl.gov/](https://lrc-ondemand.lbl.gov/)
+**Note:** Use Chrome or Firefox to browse this page. Safari has known [authentication issues](https://osc.github.io/ood-documentation/master/issue/overview.html).
+
+
+![w:700](figures/authentication.png)
+
+2.  Use your LRC username and PIN+one-time password (OTP)
+    - same credentials you use to login Lawrencium cluster
+
+
+---
+
+### OOD Dashboard on Lawrencium 
+On successful authentication you will see a OOD dashboard.
+
+![w:900 center](figures/dashboard.png)
+
+Lets do quick demo!
+For more details see previous training [slides](https://github.com/lbnl-science-it/OOD_training_Feb2023.git) and [recording](https://drive.google.com/file/d/1YOFruybGu8i1xi8imHibyHiujIAymnrX/view?usp=share_link). 
+
+---
+
+## Globus : fast data transfer 
+<style scoped>section { font-size: 22px; }</style>
+
+- Globus can be used for fast data transfer and sharing with collaborators. Connect to globus  https://globus.lbl.gov  
+- [Globus for Lawrencium](https://it.lbl.gov/resource/hpc/for-users/hpc-documentation/data-movement-and-storage/globus/)
+- Berkeley Lab users can use Globus to transfer files in/out of their LBNL [Google drive](https://it.lbl.gov/resource/globus/globus-for-google-drive/).
+- Possible endpoints include: lbnl#lrc, ucb#brc, your laptop/desktop, NERSC.
+- Transfer data to/from your laptop (endpoint setup)
+   - Create an endpoint on your machine using Globus Connect Personal [globus-connect-personal](https://www.globus.org/globus-connect-personal)
+   - Run Globus Connect Pesonal on your local machine
+
+![bg w:600 right](figures/globus.png)
+
+---
 <style scoped>section { font-size: 22px; }</style>
 
 #### lrc-xfer.lbl.gov: Data Transfer Node (DTN)
@@ -192,27 +244,8 @@ Enter your username and password (LRC credentials) in the pop-up window.
 Once the connection is established, you are ready to drag and drop files to/from lawrencium.
 
 ---
-![w:600 center](figures/filezilla_login.png)
-![w:600 center](figures/filezilla_connected.png)
 
----
-
-### Data Transfer with Globus
-<style scoped>section { font-size: 22px; }</style>
-
-- Globus can be used for fast data transfer and sharing with collaborators. Connect to globus  https://globus.lbl.gov  
-- [Globus for Lawrencium](https://it.lbl.gov/resource/hpc/for-users/hpc-documentation/data-movement-and-storage/globus/)
-- Berkeley Lab users can use Globus to transfer files in/out of their LBNL [Google drive](https://it.lbl.gov/resource/globus/globus-for-google-drive/).
-- Possible endpoints include: lbnl#lrc, ucb#brc, your laptop/desktop, NERSC.
-- Transfer data to/from your laptop (endpoint setup)
-   - Create an endpoint on your machine using Globus Connect Personal [globus-connect-personal](https://www.globus.org/globus-connect-personal)
-   - Run Globus Connect Pesonal on your local machine
-
-![bg w:600 right](figures/globus.png)
-
-----
-
-# Software Access: Software Module Farm 
+## Software Module Farm: software packages availble for researchers 
 <style scoped>section { font-size: 22px; }</style>
 
 - Software stack, commonly used compiler, software tools are provided to all users through [software module farm on lawrencium](https://it.lbl.gov/resource/hpc/for-users/hpc-documentation/software-module-farm/)
@@ -295,7 +328,7 @@ Successfully installed ml-python-2.2
   - Deactivate environment: `conda deactivate`
 ---
 
-## Job Submission and Monitoring : SLURM
+##  Slurm Job Scheduling : submitting and monitoring jobs
 SLURM is the resource manager and job scheduler for managing all the jobs on the cluster.
 
 Why is this necessary?
@@ -545,65 +578,12 @@ srun ./hello >& hello.out
 ## Submit Serial Tasks in Parallel (GNU Parallel) 
 
 GNU Parallel is a shell tool for executing jobs in parallel on one or multiple computers.
+For example : many querry sequences, independent python scripts..
 
-- A job can be a single core serial task, multi-core or MPI application.
-- A job can also be a command that reads from a pipe.
-- Typical input:
-  - bash script for a single task
-  - a list of tasks with parameters
--  Example Using GNU Parallel
-
-    Bioinformatics tool *blastp* to compare 200 RNA query sequences against sequence DB
-    Serial bash script: **run-blast.sh**
-  ---
-
-```
-[spsoni@n0003 gnu_parallel]$ cat run-blast.sh 
-#!/bin/bash
-module load  bio/blast/2.13.0
-module load parallel/20200222
-blastn -db database/16S_ribosomal_RNA -query $1 -out $2 -task blastn -dust no -outfmt "7 \ 
-delim=, qacc sacc evalue bitscore qcovus pident" -max_target_seqs 5 
-```
-
-**task.lst**: each line provides one parameter to one task:
-```
-[spsoni@n0003 gnu_parallel]$ cat task.lst 
-data/query1.fa
-data/query2.fa
-.
-.
- data/query200.fa
-```
-Instead submit single core-jobs 200 times, which potentially need 200 nodes, GNU parallel sends single-core jobs in parallel using all the cores available, e.g. 2 compute nodes 32*2=64 parallel tasks. Once a CPU core becomes available, another job will be sent to this resource.  
+To learn more about setting up GNU parallel jobs see previous training [slides](https://github.com/lbnl-science-it/LRC101_Training_Jan2023.git)
 
 ---
-**myjob_gnuparallel.sh**: Slurm script for gnu-parallel job submission on lawrencium
-```
-#!/bin/bash
-#SBATCH --job-name=test_gnupar
-#SBATCH --account=pc_test
-#SBATCH --partition=lr6
-#SBATCH --qos=lr_normal
-#SBATCH --nodes=2
-#SBATCH --time=2:00:00
 
-## Command(s) to run (example):
-module load bio/blast/2.13.0
-module load parallel/20200222
-
-export WORKDIR=/global/scratch/users/spsoni/LRC101/gnu_parallel
-cd $WORKDIR
-
-echo $SLURM_JOB_NODELIST |sed s/\,/\\n/g |awk -v cores=$SLURM_CPUS_ON_NODE '{print cores"/"$1}' > hostfile
-mkdir -p output logs
-export JOBS_PER_NODE=32
-parallel --jobs $JOBS_PER_NODE --slf hostfile --wd $WORKDIR --joblog task.log  --progress -a task.lst sh run-blast.sh {} output/{/.}.blst
-```
-Host file will be generated at run time by the above script. 
-Detailed information of how to submit serial tasks in parallel with [GNU Parallel](https://it.lbl.gov/resource/hpc/for-users/hpc-documentation/running-jobs/gnu-parallel/)
-
-----
 ##  Job Monitoring
 
 - **sinfo**: check node status of a partition (idle, allocated, drain, down) 
@@ -672,58 +652,18 @@ More Information of [Slurm Usage](https://it.lbl.gov/resource/hpc/for-users/hpc-
 
 ---
 
-# Open OnDemand (OOD)
-
-- OpenOnDemand is a web platform that provides an easy access to the cluster’s HPC resourses and services.
-- Designed and developed by Ohio Supercomputer Center.
-- Intuitive and easy access to computing resourses, alternative and convenient way to traditional command line access
-- Allow access to Lawrencium compute resources
-  - File browser: file editing, data transfer
-  - Shell command line access - terminal
-  - Job monitoring 
-- Interactive applications: Jupyter Server, RStudio Server, MATLAB, Desktop
-- Sever: [https://lrc-ondemand.lbl.gov/](https://lrc-ondemand.lbl.gov/)
-  - Intel Xeon Gold processor with 32 cores, 96 GB RAM
-
----
-
-# Accessing OOD on Lawrencium
-
-<style scoped>section { font-size: 25px; }</style>
-
- 1. Web link to connect : [https://lrc-ondemand.lbl.gov/](https://lrc-ondemand.lbl.gov/)
-**Note:** Use Chrome or Firefox to browse this page. Safari has known [authentication issues](https://osc.github.io/ood-documentation/master/issue/overview.html).
-
-
-![w:700](figures/authentication.png)
-
-2.  Use your LRC username and PIN+one-time password (OTP)
-    - same credentials you use to login Lawrencium cluster
-
-
----
-
-### OOD Dashboard on Lawrencium 
-On successful authentication you will see a OOD dashboard.
-
-![w:900 center](figures/dashboard.png)
-
-Lets do quick demo!
-Want to learn more about MyLRC portal? [Join HPCS trainign on 7th February](https://docs.google.com/forms/d/e/1FAIpQLSd6xKIEoOThNZlp1BckRaF0bSkln2V1OZXyplTkTdw0NQgXUA/viewform?usp=sf_link).  
-
----
 
 
 # Getting help
-- Virtual office hours:
+- Virtual office hours on request:
     - Time: 10.30 am to noon every Wednesday
     - Online [request](https://docs.google.com/forms/d/e/1FAIpQLScBbNcr0CbhWs8oyrQ0pKLmLObQMFmYseHtrvyLfOAoIInyVA/viewform)
 - Send us tickets at hpcshelp@lbl.gov
-- More information about LBNL Supercluster and scientic computing services can be found [here](https://it.lbl.gov/service/scienceit/).
+- More information about LBNL Supercluster and scientific computing services can be found [here](https://it.lbl.gov/service/scienceit/).
 - Looking for more trainings? Upcoming training are regularly announced [here](https://it.lbl.gov/resource/hpc/for-users/training-and-tutorials/). Other than LBNL HPC trainings  you can also access [DLab](https://dlab.berkeley.edu/partners/lbl) courses.
 
-Submit FAQ [here](https://docs.google.com/forms/d/e/1FAIpQLSfgtNRZbxmNrtNVYSZE5pHEH0foPMEMqMk3nKxenPo9xqIWrw/viewform?usp=sf_link).
-Your feedback is important to us for improving HPC services and training. Please fill out [training survey](https://docs.google.com/forms/d/e/1FAIpQLSfFZ4k87FMzom6vrk9TgMyph-uu9jp0T6oEZF3cV1lYPKLSwA/viewform)
+
+Your feedback is important to us for improving HPC services and training. Please fill out [training survey](https://docs.google.com/forms/d/e/1FAIpQLSdMpbjIaMEiAsC8rTeWYNhBzrCqcXCw59XsT7M6neA9WOwcRg/viewform?usp=sf_link)
 
 ![w:100 center](Figures/thankyou.png)
 
