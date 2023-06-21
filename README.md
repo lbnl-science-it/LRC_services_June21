@@ -1,7 +1,7 @@
 # Material for HPC Services Lawrencium Supercluster training held on 21st June 2023
 This training introduces users to HPC services provided on the Lab’s institutional cluster Lawrencium. The training is designed to cover topics useful for new users to get acquainted with the Lawrencium supercluster. The training is also beneficial for advanced users for refreshing forgotten concepts. The training is conducted virtually and video recording can be accessed on this page.  
 
-Click [here](http://htmlpreview.github.io/?https://github.com/lbnl-science-it/LRC_services_June21/blob/main/slides.md) to view slides.
+Click [here](http://htmlpreview.github.io/?https://github.com/lbnl-science-it/LRC_services_June21/blob/main/slides.html) to view slides.
 
 In this training, we will give an overview of the Lawrencium supercluster with mostly hands-on sessions. Here are the primary objectives of the training:
      
