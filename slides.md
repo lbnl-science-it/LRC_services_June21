@@ -388,7 +388,7 @@ srun: Nodes n0101.lr6 are ready for job
 ```
 Once you are on the assigned compute node, start application/commands directly
 
-- **salloc**: similarly to *srun --pty bash*
+- **salloc**: allocate resources to run a job
 - a new bash session will start up on the compute node, –pty gives you a pseudo terminal
 
 
