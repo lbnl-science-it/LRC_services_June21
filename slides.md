@@ -34,7 +34,7 @@ img[alt~="center"] {
 2. [MyLRC User Portal : account and project management](#6)
 3. [Open OnDemand Portal: GUI applications](#12)
 4. [Globus : fast data transfer](#15)
-5. [Software Module Farm: software packages availble for researchers](#18)
+5. [Software Module Farm: software packages available for researchers](#18)
 6. [Slurm Job Scheduling: job submission and monitoring](#22)
 
 ---
@@ -67,7 +67,7 @@ img[alt~="center"] {
 
 ---
 ## Quick Poll: 
-### Check poll question and chose your answer.
+### Check the poll question and choose your answer.
 
 ----
 
@@ -93,7 +93,7 @@ Sign the user access agreement form for first time login
   2. **Condo account**: PIs buy in compute nodes to be added to the general pool, in exchange for their own priority access and share the Lawrencium infrastructure (lr_xxx)
   3. **Recharge account**: pay as you go with minimal recharge rate ~ $0.01/SU (ac_xxx)
 - Check out more details here. [Project Accounts](https://it.lbl.gov/resource/hpc/for-users/hpc-documentation/accounts/projects-accounts/)
-- LBL affiliated PI can request project accout at [MyLRC portal](https://mylrc.lbl.gov/)
+- LBL affiliated PI can request project account at [MyLRC portal](https://mylrc.lbl.gov/)
 - PIs can grant PCA/condo/recharge project access to researchers/students and external collaborators.
 
 ----
@@ -103,7 +103,7 @@ PIs can sponsor researchers/students and external collaborators for cluster acco
 Account requests and approval will be done through [MyLRC portal](https://mylrc.lbl.gov/).
   
   **Current Workflow:**
-  1. Setup an account on MyLRC [portal](https://mylrc.lbl.gov/). Portal uses CILogon for user authentication. Users can register using email address provided by LBNL or UC Berkeley or other institutions or google.
+  1. Set Up an account on MyLRC [portal](https://mylrc.lbl.gov/). Portal uses CILogon for user authentication. Users can register using the email address provided by LBNL or UC Berkeley or other institutions or google.
   2. Sign the User Access Agreement Form on the welcome page
   3. Request to join existing project
   4.  PI approval
