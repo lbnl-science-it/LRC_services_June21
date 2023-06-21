@@ -80,7 +80,12 @@ img[alt~="center"] {
 
 For more details see previous training [slides](https://github.com/lbnl-science-it/OOD_training_Feb2023.git) and [recording](https://drive.google.com/file/d/1YOFruybGu8i1xi8imHibyHiujIAymnrX/view?usp=share_link).  
 
-----
+---
+Sign the user access agreement form for first time login
+![bg w:600](figures/mylrc_useragreement.png)
+![bg w:600](figures/mylrc_useragreement2.png)
+
+---
 
 #### Project Accounts
 - Three types of project accounts can be requested.   
