@@ -18,7 +18,7 @@ img[alt~="center"] {
 
 <!-- _class: lead -->
 <!-- _paginate: false -->
-# Services on Lawrencium Supercluster
+# HPC services on Lawrencium Supercluster
 ### Sapana Soni
 ###### HPCS User Support Team
 ![ w:200](figures/ScienceIT-Logo-blue.png)
@@ -50,9 +50,9 @@ img[alt~="center"] {
 
 - Lawrencium Compute Nodes
   - data center is housed in the building 50B
-  - over 2187 compute nodes (~65016 CPU cores)
-  - 210 GPU cards
-  - 32 partitions, lr3, lr4, lr5,lr6, es1, cm1 ...
+  - over 2350 compute nodes (~72620 CPU cores)
+  - 224 GPU cards
+  - 32 partitions, lr3, lr4, lr5,lr6,lr7, es1, cm1 ...
   - ~1700 user accounts 
   - 342 projects/groups
 
@@ -62,12 +62,12 @@ img[alt~="center"] {
 ![bg center w:920](figures/lrc1_novis.png)
 
 <style scoped>section { font-size: 20px; }</style>
-[Detailed Information of Lawrencium](https://it.lbl.gov/resource/hpc/supported-research-clusters/lawrencium/)
+[Detailed Information of Lawrencium](https://it.lbl.gov/service/scienceit/high-performance-computing/)
 
 
 ---
 ## Quick Poll: 
-### Check poll question and chose your answer [here](https://www.menti.com/al8w3c3piwrn) and enter your answer.
+### Check poll question and chose your answer.
 
 ----
 
@@ -105,7 +105,7 @@ Account requests and approval will be done through [MyLRC portal](https://mylrc.
   5.  Lawrencium account creation by HPCS team
   6. Users will receive a confirmation email and PIN+OTP set up instructions.
   
-  Check out [documentation](https://it.lbl.gov/service/scienceit/high-performance-computing/lrc/mylrc-lawrencium-account-managemen-tsystem/).
+  Check out [documentation](https://it.lbl.gov/service/scienceit/high-performance-computing/mylrc-lawrencium-account-management-system/).
 
 
 
